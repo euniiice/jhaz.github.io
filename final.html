@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- links to connect css & js in this html -->
+        <link rel="stylesheet" href="dressup.css">
+        <script src="workout.js" defer></script>
+
+        <script src="./loginpage/login.js" defer></script>
+
+        <title>Jhaz's Homemade Delicacies</title>
+        <link rel="icon" href="picsJ/jjjj.svg" sizes="64×64" type="image/svg+xml">
+
+        <!-- link for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+
+        <header class="topbar">
+
+            <div class="navbar">
+
+                <img src="picsJ/jjjj.svg" alt="logo" class="logo" onclick="show('home')">
+            
+                <nav class="navigation">
+                    <a onclick="show('home')">HOME</a>
+                    <a onclick="show('products')">PRODUCTS</a>
+                    <a onclick="show('faqs')">FAQs</a>
+                    <a onclick="show('about')">ABOUT US</a>
+                </nav>
+            
+                <div class="menubutton">
+                <div class="searchbar">
+                    <input type="text" id="search-input" placeholder="Search...">
+                    <i class="fa-solid fa-search" id="search-icon"></i>
+                </div>
+                
+                <div class="menus-icon">
+                    <a href="shopbag.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                    <a href="loginpage/login.html"><i class="fa-solid fa-circle-user"></i></a>
+                </div>
+                </div>
+            </div>
+        </header>
+
+
+
+        <!-- IDs -->
+        <!-- home -->
+        <div id="home" class="section active">
+
+            <div class="feature">
+            <h2 style="text-align: center;">Browse our latest Products </h2>
+
+            <div class="featured-products">
+                <h3 style="text-align: center;">Featured Products</h3>
+                    <img src="picsJ/M.svg" alt="Atsara">
+                    <img src="picsJ/L.svg" alt="Maning Hubad">
+
+                <h3 style="text-align: center;">New Products</h3>
+                    <img src="picsJ/B.svg" alt="Chili Garlic">
+                    <img src="picsJ/C.svg" alt="Crunch Roll">
+
+                <h3 style="text-align: center;">Bestsellers</h3>
+                    <img src="picsJ/A.svg" alt="Peanut Butter">
+                    <img src="picsJ/K.svg" alt="Sukang Pinakurat">
+            </div>
+
+            <h3 style="text-align: center;">Exciting delicacies are coming soon — keep an eye on our latest creations!</h3>
+
+                <h3 style="text-align: center;">
+                    <button class="view" onclick="show('products')">View All Products</button>
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- products -->
+        <div id="products" class="section">
+        <h2 style="text-align: center;">Products</h2>
+
+            <div class="product-pic">
+
+                <div class="product-card" data-keywords="peanut butter, peanut, butter, homemade peanut butter">
+                    <img src="picsJ/A.svg" alt="Peanut Butter">
+
+                        <div class="description">
+                            <h2>Homemade Peanut Butter</h2>
+
+                            <p><strong>Sizes:</strong><br>
+                            Medium, Large
+                            </p>
+
+                            <p><strong>Ingredients:</strong><br>
+                            Roasted peanuts, sugar, butter, skimmed milk powder
+                            </p>
+
+                            <p><strong>Storage &amp; Shelf Life:</strong><br>
+                            Room temperature: Store in an airtight container in a cool, dark place (lasts 1–3 months)<br>
+                            Refrigerated: Keeps up to 6 months for best quality
+                            </p>
+
+                            <p><strong>Handling Tips:</strong><br>
+                            Stir before use if natural oils separate<br>
+                            Avoid moisture or crumbs to prevent spoilage
+                            </p>
+
+                            <p><strong>Signs of Spoilage:</strong><br>
+                            Sour or off smell<br>
+                            Mold or unusual discoloration<br>
+                            Bitter or rancid taste
+                            </p>             
+                        </div>
+
+                    
+                    <div class="product-actions">
+
+                    <!-- PRICE  -->
+                    <p class="product-price" id="price-product1">₱150</p>
+
+                        <!-- SIZE OPTIONS -->
+                    <div class="sizes">
+                        <button class="size-btn" data-price="150">Medium</button>
+                        <button class="size-btn" data-price="200">Large</button>
+                    </div>
+
+                    <button class="cartbutton">
+                        <span class="add">
+                            Add to Cart
+                        </span>
+                        <span class="added">
+                            Added!
+                        </span>
+                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-gift"></i>
+                    </button>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <div class="product-pic">
+                <div class="product-card" data-keywords="sukang, sukang pinakurat, pinakurat, spiced vinegar, vinegar, spiced">
+                    <img src="picsJ/K.svg" alt="Sukang Pinakurat">
+                    <div class="description">
+                        <h2>Sukang Pinakurat | Spiced Vinegar</h2>
+                        <p><strong>Sizes:</strong><br>
+                        Medium, Large
+                        </p>
+
+                        <p><strong>Ingredients:</strong><br>
+                        Vinegar, garlic, chili peppers, peppercorns
+                        </p>
+
+                        <p><strong>Storage &amp; Shelf Life:</strong><br>
+                        Room temperature: Store in a clean, tightly sealed bottle and keep in a cool, dark place (lasts 6–12 months)<br>
+                        Refrigerated: Extends shelf life and helps maintain best quality
+                        </p>
+
+                        <p><strong>Handling Tips:</strong><br>
+                        Avoid introducing water or contaminants<br>
+                        Use a clean, dry spoon or ladle for each use
+                        </p>
+
+                        <p><strong>Signs of Spoilage:</strong><br>
+                        Unpleasant or unusual odor<br>
+                        Presence of mold or unusual discoloration<br>
+                        Off or bitter taste
+                        </p>       
+                    </div>
+
+                    <div class="product-actions">
+                        <!-- PRICE  -->
+                    <p class="product-price" id="price-product1">₱65</p>
+
+                    <!-- SIZE OPTIONS -->
+                    <div class="sizes">
+                        <button class="size-btn" data-price="65">Medium</button>
+                        <button class="size-btn" data-price="85">Large</button>
+                    </div>
+
+                    <button class="cartbutton">
+                        <span class="add">
+                            Add to Cart
+                        </span>
+                        <span class="added">
+                            Added!
+                        </span>
+                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-gift"></i>
+                    </button>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="product-pic">
+                <div class="product-card" data-keywords="mani, roasted peanuts, peanuts, maning hubad, roasted, homemade roasted peanuts">
+                    <img src="picsJ/L.svg" alt="Mani">
+                    <div class="description">
+                        <h2>Homemade Maning Hubad | Roasted Peanut</h2>
+                        <p><strong>Sizes:</strong><br>
+                        Small, Medium, Large
+                        </p>
+
+                        <p><strong>Flavors:</strong><br>
+                        Adobo, Spicy Garlic
+                        </p>
+
+                        <p><strong>Ingredients:</strong><br>
+                        Peanuts
+                        </p>
+
+                        <p><strong>Storage &amp; Shelf Life:</strong><br>
+                        Room temperature: Store in an airtight container in a cool, dry place (lasts 2–4 weeks)<br>                                               
+                        Refrigerated: Keeps up to 2–3 months for better freshness
+                        </p>
+
+                        <p><strong>Handling Tips:</strong><br>
+                        Keep container tightly sealed after each use<br>
+                        Avoid moisture and heat exposure to prevent spoilage
+                        </p>
+
+                        <p><strong>Signs of Spoilage:</strong><br>
+                        Rancid or stale smell<br>
+                        Mold growth or dark spots<br>
+                        Bitter or unpleasant taste
+                        </p>    
+                    </div>
+
+                    <div class="product-actions">
+                        <!-- PRICE  -->
+                    <p class="product-price" id="price-product1">₱50</p>
+
+                    <!-- SIZE OPTIONS -->
+                    <div class="sizes">
+                        <button class="size-btn" data-price="50">Small</button>
+                        <button class="size-btn" data-price="120">Large</button>
+                    </div>
+
+                    <button class="cartbutton">
+                        <span class="add">
+                            Add to Cart
+                        </span>
+                        <span class="added">
+                            Added!
+                        </span>
+                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-gift"></i>
+                    </button>
+                    </div>
+
+                </div>
+            </div>
+            
+
+            <div class="product-pic">
+                <div class="product-card" data-keywords="atsara, pickle, pickled papaya, unripe papaya, homemade atsara">
+                    <img src="picsJ/M.svg" alt="Atsara">
+                    <div class="description">
+                        <h2>Homemade Atsara | Unripe Green Pickled Papaya</h2>
+                        <p><strong>Sizes:</strong><br>
+                        Medium, Large
+                        </p>
+
+                        <p><strong>Ingredients:</strong><br>
+                        Unripe green papaya, carrots, bell peppercorns, vinegar, sugar, salt, garlic
+                        </p>
+
+                        <p><strong>Storage &amp; Shelf Life:</strong><br>
+                        Room temperature: Store in a clean, tightly sealed container in a cool, dry place (lasts 1–2 months if properly pickled)<br>
+                        Refrigerated: Keeps up to 3–6 months for best quality
+                        </p>
+
+                        <p><strong>Handling Tips:</strong><br>
+                        Use a clean, dry spoon when serving<br>
+                        Keep vegetables fully submerged in vinegar brine<br>
+                        Seal container tightly after each use
+                        </p>
+
+                        <p><strong>Signs of Spoilage:</strong><br>
+                        Unpleasant or off odor<br>
+                        Presence of mold or cloudiness in the brine<br>
+                        Slimy texture or unusual taste
+                        </p>    
+                    </div>
+
+
+                    <div class="product-actions">
+                        <!-- PRICE  -->
+                    <p class="product-price" id="price-product1">₱120</p>
+
+                    <!-- SIZE OPTIONS -->
+                    <div class="sizes">
+                        <button class="size-btn" data-price="120">Medium</button>
+                        <button class="size-btn" data-price="200">Large</button>
+                    </div>
+
+                    <button class="cartbutton">
+                        <span class="add">
+                            Add to Cart
+                        </span>
+                        <span class="added">
+                            Added!
+                        </span>
+                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-gift"></i>
+                    </button>
+                    </div>
+                    
+
+                </div>
+            </div>
+
+            <div class="product-pic">
+                <div class="product-card" data-keywords="chili garlic, chili, oil, chili oil, spicy condiment, homemade chili garlic, garlic, chili peppers">
+                    <img src="picsJ/B.svg" alt="Chili Garlic">
+                    <div class="description">
+                        <h2>Homemade Chili Garlic Oil</h2>
+                        <p><strong>Sizes:</strong><br>
+                        Small, Medium
+                        </p>
+
+                        <p><strong>Ingredients:</strong><br>
+                        Chili peppers, garlic, vinegar, sugar, salt
+                        </p>
+
+                        <p><strong>Storage &amp; Shelf Life:</strong><br>
+                        Room temperature: Store in a clean, tightly sealed container in a cool, dark place (lasts 1–2 months)<br>
+                        Refrigerated: Keeps up to 3–6 months for best quality
+                        </p>
+
+                        <p><strong>Handling Tips:</strong><br>
+                        Use a clean, dry spoon or utensil when serving<br>
+                        Keep container tightly closed after each use<br>
+                        Avoid introducing water to prevent spoilage
+                        </p>
+
+                        <p><strong>Signs of Spoilage:</strong><br>
+                        Off or rancid smell<br>
+                        Cloudy or unusual appearance<br>
+                        Bitter or off taste
+                        </p>    
+                    </div>
+
+                    <div class="product-actions">
+                        <!-- PRICE  -->
+                    <p class="product-price" id="price-product1">₱80</p>
+
+                    <!-- SIZE OPTIONS -->
+                    <div class="sizes">
+                        <button class="size-btn" data-price="80">Small</button>
+                        <button class="size-btn" data-price="120">Medium</button>
+                    </div>
+                    
+
+                    <button class="cartbutton">
+                        <span class="add">
+                            Add to Cart
+                        </span>
+                        <span class="added">
+                            Added!
+                        </span>
+                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-gift"></i>
+                    </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="product-pic">
+                <div class="product-card" data-keywords="bagoong, shrimp paste, alamang, homemade bagoong, fermented shrimp">
+                    <img src="picsJ/D.svg" alt="Bagoong">
+                    <div class="description">
+                        <h2>Bagoong Alamang | Shrimp Paste</h2>
+                        <p><strong>Sizes:</strong><br>
+                        Medium, Large
+                        </p>
+
+                        <p><strong>Ingredients:</strong><br>
+                        Shrimp paste, salt, chili peppers, garlic, vinegar
+                        </p>
+
+                        <p><strong>Storage &amp; Shelf Life:</strong><br>
+                        Room temperature: Store in a clean, tightly sealed container in a cool, dry place (lasts 2–3 months after opening)<br>
+                        Refrigerated: Keeps up to 6 months or longer for best quality
+                        </p>
+
+                        <p><strong>Handling Tips:</strong><br>
+                        Always use a clean, dry spoon when serving<br>
+                        Keep container tightly closed after each use<br>
+                        Avoid introducing water to prevent spoilage
+                        </p>
+
+                        <p><strong>Signs of Spoilage:</strong><br>
+                        Strong foul or rotten odor (beyond normal fermentation smell)<br>
+                        Presence of mold or unusual discoloration<br>
+                        Extremely bitter or unpleasant taste
+                        </p> 
+                    </div>
+
+                    <div class="product-actions">
+                        <!-- PRICE  -->
+                    <p class="product-price" id="price-product1">₱120</p>
+
+                    <!-- SIZE OPTIONS -->
+                    <div class="sizes">
+                        <button class="size-btn" data-price="120">Medium</button>
+                        <button class="size-btn" data-price="200">Large</button>
+                    </div>
+
+                    <button class="cartbutton">
+                        <span class="add">
+                            Add to Cart
+                        </span>
+                        <span class="added">
+                            Added!
+                        </span>
+                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-gift"></i>
+                    </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="product-pic">
+                <div class="product-card" data-keywords="crunch roll, candied peanut roll, peanut crunch roll, homemade crunch roll, peanuts, candied, candy, roll">
+                    <img src="picsJ/C.svg" alt="Crunch Roll">
+                    <div class="description">
+                        <h2>Homemade Candied Peanut Crunch Roll</h2>
+                        <p><strong>Sizes:</strong><br>
+                        Medium
+                        </p>
+
+                        <p><strong>Ingredients:</strong><br>
+                        Peanuts, sugar
+
+                        <p><strong>Storage &amp; Shelf Life:</strong><br>
+                        Room temperature: Store in an airtight container in a cool, dry place (lasts 1–2 weeks)<br>
+                        Refrigerated: Keeps up to 3–4 weeks for best quality
+                        </p>
+
+                        <p><strong>Handling Tips:</strong><br>
+                        Keep rolls in a dry container to prevent moisture from softening the caramel<br>
+                        Avoid crushing when storing<br>
+                        Consume soon after opening for best crunch
+                        </p>
+
+                        <p><strong>Signs of Spoilage:</strong><br>
+                        Sticky or soggy texture<br>
+                        Unpleasant or off smell<br>
+                        Mold growth
+                        </p> 
+                    </div>
+
+                    <div class="product-actions">
+                        <!-- PRICE  -->
+                    <p class="product-price" id="price-product1">₱60</p>
+
+                    <!-- SIZE OPTIONS -->
+                    <div class="sizes">
+                        <button class="size-btn" data-price="60">Medium</button>
+                        <button class="size-btn" data-price="120">Large</button>
+                    </div>
+
+                    <button class="cartbutton">
+                        <span class="add">
+                            Add to Cart
+                        </span>
+                        <span class="added">
+                            Added!
+                        </span>
+                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-gift"></i>
+                    </button>
+                    </div>
+
+                </div>
+            </div>
+
+                        <!-- NO RESULTS MESSAGE -->
+            <p id="no-results" style="display:none; text-align:center; font-size:18px; color:#888; margin-top:20px;">
+                No results found
+            </p>
+            
+        </div>
+
+
+
+
+
+        <div id="faqs" class="section">
+            <h2 style="text-align: center;"> Frequently asked Questions </h2>
+        <div class="faqs-two">
+            <h3> ABOUT OUR PRODUCTS </h3>
+            <pre>
+<b>What are the items you’re selling?</b>
+                
+Homemade: Peanut Butter, Bagoong (shrimp paste), Roasted Peanuts with different 
+flavors, and Atsara (pickled unripe green papaya). Stay tuned for more upcoming 
+Filipino homemade delicacies.
+                
+<b>What ingredients do you use?</b>
+                
+See ingredients in each photo at the “Products” section.
+                
+<b>Are products made to order or kept in stock?</b>
+                
+We collect orders before producing in bulk.
+                
+<b>Are products made to order or kept in stock?</b>
+                
+Every two weeks.
+                </pre>
+
+                <h3> ORDERING, DELIVERY, & PAYMENT </h3>
+
+                <pre>
+<b>How do I place an order?</b>
+
+You can directly message us on the social media accounts provided.
+
+<b>How do I place an order?</b>
+
+You can directly message us on the social media accounts provided.
+
+<b>Do you accept cash on delivery, online payments, or bank transfers?</b>
+
+Yes. Delivery around our Baranggay area are free, outside will have a shipping/delivery fee 
+shouldered by the customer. We do accept online payments (GCash only) and bank transfer, do not 
+edit/crop the screenshot photos while sending, and send the reference number.
+
+<b>What are the couriers?</b>
+
+J&T, Lalamove, and Grab.
+
+<b>Do you deliver outside Manila/Bulacan?</b>
+
+Yes, thru couriers. Outside Manila/Bulacan may take a few days to arrive.
+
+<b>Can I pick up my order directly from your location?</b>
+
+Yes. 
+                </pre>
+
+                <p>
+                    Note: Storing of products can be read at the <b><a onclick="show('products')">"Products"</a> </b> section.
+                </p>
+                </div>
+            </div>
+
+
+
+
+
+            <div id="about" class="section">
+            <div class="about-two">
+            <h2> ABOUT US </h2>
+
+                <p> Our products are freshly homemade, with no added preservatives or chemicals. Each batch is crafted with love for your family’s enjoyment, perfect for any occasion. </p>
+                <p> We began as a kitchen hobby blossomed into a one-woman business in San Jose del Monte, Bulacan. We wanted to share homemade goodness with everyone, always made with care and quality ingredients. We prioritize fresh, preservative-free products, supporting local suppliers, and giving every order a personal touch. </p>
+                <p> Orders are collected before production to ensure freshness, and shipping outside Manila may take a few days.</p>
+                <p> Thank you for supporting small businesses and helping us share homemade goodness! </p>
+
+
+            <h2> CONTACTS </h2>
+            <p> For more business inquiries, feel free to connect with us through the following:</p>
+
+                <p>
+                    <b> Location </b> <br>
+                    Gumaoc East, San Jose del Monte, 3023, Bulacan, Philippines 
+                </p>
+
+                <p class="socialmedia"> 
+                    <b> Social Media </b> <br>
+                    Facebook: <a class="socmed" href="https://www.facebook.com/jhazzylyn.rosales">Jhazzylin Rosales</a> <br>
+                    Instagram: <a class="socmed" href="https://www.instagram.com/thisisjhazz">thisisjhazz</a><br>
+                    Email: <a class="socmed" href="mailto:rosalesjacylin30@gmail.com">rosalesjacylin30@gmail.com</a>
+                </p>
+            </div>
+
+            </div>
+
+
+
+            <footer class="footer">
+            <p>© 2026 Jhaz's Homemade Delicacies. All rights reserved.</p>
+            </footer>
+
+        
+    </body>
+</html>

@@ -1,0 +1,526 @@
+* {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    z-index: 1000;    /* THIS is the fix */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1200px;   /* keeps everything "in the middle" */
+    margin: 0 auto;      /* centers the whole bar */
+
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.logo {
+    max-width: 65px;
+    height: auto;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.navigation {
+    display: flex;
+    gap: 24px;
+    cursor: pointer;
+}
+
+.menubutton {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.menus-icon {
+    display: flex;
+    gap: 16px;
+}
+
+/* view button "View All Products" */
+.view { 
+    background-color: #dd8820;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.view:hover {
+    background-color: #bb7018;
+}
+
+.view:active {
+    transform: scale(0.95);
+}
+
+.featured-products {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+
+    gap: 20px;
+}
+
+.featured-products img {
+    display: inline-block; 
+    margin: 13px;        /* space between images */
+    width: 400px;                 /* optional, control image size */
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover animation */
+    cursor: pointer;              /* pointer on hover */
+    border-radius: 10px;          /* optional rounded corners */
+}
+
+.featured-products img:hover {
+    transform: scale(1.03);       /* slightly enlarge image on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* subtle shadow */
+}
+
+
+
+
+
+
+/* ----------------------------------------- products section */
+.product-card {
+    max-width: 900px;
+    display: flex;                 /* ONLY flex */
+    align-items: flex-start;       /* align image + text at top */
+    gap: 40px;
+    margin: 20px auto;}
+
+.product-card img {
+    width: 220px;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.06s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.10);       /* optional zoom effect */
+}
+
+.product-card .description {
+    max-width: 500px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+
+    display: none;                /* hidden by default */
+    margin-top: 10px;             /* space below image */
+    font-size: 14px;
+    text-align: left;
+}
+
+.product-card:hover .description {
+    opacity: 1;
+    transform: translateX(0);
+    display: block;             /* show text on hover */
+}
+
+.product-card:hover .description,
+.product-card.revealed .description {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.product-pic {
+    display: flex;
+    justify-content: center;   /* centers the card */
+    margin: 50px 0;
+    width: 100%;
+}
+
+.product-pic img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.50s ease;    /* smooth animation */
+    border-radius: 10px;                 /* optional rounded corners */
+}
+
+.description {
+    align-self: flex-start;
+    max-width: 500px;
+    margin-top: 10px;
+    white-space: normal;
+    word-break: normal;
+}
+
+.description h2 {
+    margin: 0 0 14px 0;
+    font-size: 22px;
+}
+
+.description p {
+    margin: 0 0 14px 0;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .description {
+        max-width: 100%;
+    }
+}
+
+/* cart button */
+
+.cartbutton {
+    display: flex;
+    position: relative;
+    height: 50px;
+    width: 160px;
+
+    background-color: #dd8820;
+    color: white;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 16px;
+    gap: 10px;
+    align-items: center;
+    overflow: hidden; 
+    cursor: pointer;
+    transition: ease 0.3s, transform 0.2s;
+}
+
+.cartbutton:active {
+    transform: scale(0.95);
+}
+
+.cartbutton .fa-shopping-cart {
+    position: absolute;
+    top: 50%;
+    left: -11%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 1.5rem;
+}
+
+.cartbutton .fa-gift {
+    position: absolute;
+    top: -20%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    font-size: 1.1rem;
+}
+
+.cartbutton .add, 
+.cartbutton .added {
+    position: absolute;
+    white-space: nowrap;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cartbutton .added {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cartbutton.clicked .fa-shopping-cart {
+    animation: cart 1.5s ease-in-out forwards;
+}
+
+.cartbutton.clicked .fa-gift {
+    animation: gift 1.5s ease-in-out forwards;
+}
+
+.cartbutton.clicked .add {
+    animation: text1 1.5s ease-in-out forwards;
+}
+
+.cartbutton.clicked .added {
+    animation: text2 1.5s ease-in-out forwards;
+    visibility: visible;
+}
+
+@keyframes cart {
+    0% { 
+        left: -10%; 
+    }
+
+    40%, 60% { 
+        left: 50%; 
+    }
+    100% { 
+        left: 110%; 
+    }
+}
+
+@keyframes gift {
+    0%, 40% { 
+        top: -20%; 
+    }
+
+    60% { 
+        top: 40%;
+        left: 51%; 
+    }
+    100% { 
+        top: 40%;
+        left: 112%; 
+    }
+}
+
+@keyframes text1 {
+    0% { 
+        opacity: 1; 
+    }
+
+    20%, 100% { 
+        opacity: 0; 
+    }
+}
+
+@keyframes text2 {
+    0%, 80% { 
+        opacity: 0; 
+    }
+
+    100% { 
+        opacity: 1; 
+    }
+}
+
+
+
+
+
+
+/* size */
+
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #c25a10;
+    text-align: center;
+}
+
+.sizes {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.size-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+}
+
+.size-btn.active {
+    background:  #dd8820;
+    color: white;
+    border-color: #f07823;
+}
+
+
+
+
+
+
+.footer {
+    border-top: 1px solid #ccc;   /* same as your top border */
+    margin-top: 60px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.faqs-two {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.about-two {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.socmed {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #bb7018;
+}
+
+.socmed:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------- search bar */
+.searchbar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    position: relative;        /* needed for absolute positioning of input */
+    cursor: pointer;
+    overflow: hidden;
+    transition: width 0.4s ease, border-radius 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;   /* icon perfectly centered */
+}
+
+.searchbar i {
+    font-size: 20px;
+    color: black;
+    position: relative;        /* stays above input */
+    z-index: 2;
+    transition: all 0.4s ease;
+}
+
+.searchbar input {
+    position: absolute;        /* allow independent movement */
+    left: 0;
+    width: 0;
+    height: 100%;
+    opacity: 0;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    font-size: 16px;
+    background: transparent;
+    color: black;
+    transition: width 0.4s ease, opacity 0.4s ease;
+    z-index: 1;
+}
+
+/* Expanded state on hover or click */
+.searchbar:hover,
+.searchbar.active {
+    width: 200px;
+    border-radius: 30px;
+}
+
+.searchbar:hover input,
+.searchbar.active input {
+    width: 100%;
+    opacity: 1;
+}
+
+/* Move icon to the right when expanded */
+.searchbar:hover i,
+.searchbar.active i {
+    position: absolute;
+    right: 10px;
+}
+
+.searchbar.active {
+    width: 260px;
+    border-radius: 30px;
+    justify-content: flex-start;
+    padding-left: 15px;
+}
+
+.searchbar.active input {
+    width: 100%;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.active {
+    display: block;
+}
+
+.navigation a,
+.menubutton a {
+    color: black;
+    text-decoration: none;
+}
+
+.navigation a:hover,
+.menubutton a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+.section {
+    display: none;      /* hide all by default */
+}
+
+.section.active {
+    display: block;     /* show only the active section */
+}

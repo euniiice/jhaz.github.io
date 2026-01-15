@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cart - Jhaz's Homemade Delicacies</title>
+
+    <link rel="stylesheet" href="shopbag.css">
+        
+    <!-- Cart page -->
+    <script src="shopbag.js" defer></script>
+
+
+
+        
+</head>
+
+
+<body>
+
+    <div class="cart-container">
+        <h1>Your Cart</h1>
+
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Size</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Cart items will be injected here dynamically -->
+            </tbody>
+        </table>
+
+        <p id="cart-empty" class="empty-cart" style="display:none;">Your cart is empty.</p>
+
+        <p id="cart-total" style="text-align:right; font-size:18px; font-weight:bold; margin-top:20px;"></p>
+
+        <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+    </div>
+
+
+
+
+</body>
+
+</html>
