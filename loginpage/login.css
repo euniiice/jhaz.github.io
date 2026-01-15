@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f0f0;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    width: 390px;
+    height: 480px;
+}
+
+.header-login {
+    text-align: center;
+    margin: 20px;
+}
+
+.input .inputbox {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 60px;
+    font-size: 17px;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.3);
+    outline: none;
+    transition: .3s;
+}
+
+::placeholder {
+    font-weight: 500;
+    color: #222;
+}
+
+.inputbox:focus {
+    width: 105%;
+}
+
+.forgot {
+    text-align: center;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+#remember-me {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #c25a10;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section a {
+    margin-left: 5px;
+    color: #c25a10;
+}
+
+.loginbutton {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.logbutton {
+    width: 100%;
+    height: 60px;
+    background-color: #f07823;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.loginbutton label {
+    position: absolute;
+    bottom: 19%;
+    left: 50%;
+    color: black;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.logbutton:hover {
+    background-color: #c25a10;
+    color: white;
+}
+
+.register {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
